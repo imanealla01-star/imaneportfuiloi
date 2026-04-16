@@ -1,0 +1,169 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@import "tailwindcss";
+
+/* ── Tailwind v4 Theme (CSS-first config) ── */
+@theme inline {
+  /* Color palette */
+  --color-mint: #AABDB2;
+  --color-teal: #78BFB5;
+  --color-ocean: #46A2AC;
+  --color-deep-ocean: #0E84A2;
+  --color-navy: #006593;
+
+  /* Derived colors */
+  --color-mint-light: #d4e5de;
+  --color-mint-50: #f0f6f3;
+  --color-navy-dark: #004a6e;
+  --color-ocean-light: #e8f4f6;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+}
+
+/* ── Root Variables ── */
+:root {
+  --background: #fafbfc;
+  --foreground: #1a2332;
+}
+
+/* ── Keyframes ── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* ── Utility Classes ── */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(170, 189, 178, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0E84A2, #006593, #46A2AC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #f0f6f3 0%, #e8f4f6 50%, #f0f6f3 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(160deg, #f0f6f3 0%, #e8f4f6 30%, #d4e5de 60%, #f0f6f3 100%);
+}
+
+.gradient-cta {
+  background: linear-gradient(135deg, #0E84A2, #006593);
+}
+
+.gradient-cta:hover {
+  background: linear-gradient(135deg, #006593, #004a6e);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f6f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AABDB2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78BFB5;
+}
+
+/* ── Focus Styles ── */
+*:focus-visible {
+  outline: 2px solid #46A2AC;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(70, 162, 172, 0.2);
+  color: #006593;
+}
+
+/* ── Scroll Reveal ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
