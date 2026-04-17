@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -40,10 +41,14 @@ export default function Navbar() {
           className="group flex items-center gap-2"
           id="nav-logo"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-deep-ocean to-navy flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-            <span className="text-white font-heading font-bold text-lg">
-              I
-            </span>
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow bg-white flex items-center justify-center">
+            <Image
+              src="/images/imane logo.png"
+              alt="Imane Logo"
+              fill
+              sizes="40px"
+              className="object-contain"
+            />
           </div>
           <span className="hidden sm:block font-heading text-xl font-semibold text-navy">
             Imane Alla
