@@ -114,7 +114,7 @@ export default function Hero() {
                 {/* Image container */}
                 <div className="relative w-72 h-96 sm:w-80 sm:h-[440px] lg:w-96 lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/portrait-imane.jpg"
+                    src="/images/portrait-imane1.png"
                     alt="Imane Alla — Doctorante en sociologie et développement social"
                     fill
                     className="object-cover"
