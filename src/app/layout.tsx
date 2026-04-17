@@ -146,6 +146,18 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+
+        {/* Floating Contact Button */}
+        <a
+          href="/contact"
+          className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] flex items-center justify-center gap-2 px-6 py-4 rounded-full text-white font-semibold gradient-cta transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+          style={{ boxShadow: "0 10px 25px -5px rgba(0, 101, 147, 0.4)" }}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Contact me
+        </a>
       </body>
     </html>
   );

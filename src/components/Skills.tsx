@@ -63,7 +63,7 @@ export default function Skills() {
                 <div className="absolute -inset-2 rounded-3xl border-2 border-teal/20" />
                 
                 <Image
-                  src="/images/imane skills1.png"
+                  src="/images/imane skills2.png"
                   alt="Mes Compétences"
                   fill
                   className="object-cover rounded-3xl shadow-xl"

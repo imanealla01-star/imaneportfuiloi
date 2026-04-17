@@ -71,13 +71,6 @@ export default function Navbar() {
               )}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            id="nav-cta"
-            className="ml-4 px-5 py-2.5 rounded-xl text-sm font-semibold text-white gradient-cta shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-          >
-            Prendre RDV
-          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -127,12 +120,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="block mt-2 px-4 py-3 rounded-xl text-sm font-semibold text-white text-center gradient-cta shadow-md"
-          >
-            Prendre RDV
-          </Link>
         </div>
       </div>
     </header>
